@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Lato", sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background: bisque;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url(../assets/pexels-suissounet-1200450.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    overflow: hidden;
+}
+
+.login-card-container {
+    width: 100%;
+    max-width: 592px;
+    color: #ffffff;
+    background: rgba(24, 26, 28, 0.84);
+    display: flex;
+    flex-direction: column;
+    border-radius: 16px;
+    padding: 40px;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-logo img {
+    width: 163px;
+    margin-bottom: 25px;
+}
+
+.login-header {
+    text-align: center;
+    margin-bottom: 37px;
+}
+
+.login-header h3 {
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.login-header p {
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    width: 100%; 
+    position: relative;
+    gap: 10px;
+}
+
+.login-form label {
+    font-size: 16px;
+    font-weight: 400;
+    margin-top: 20px;
+}
+
+.login-form .form-item input {
+    position: relative;
+    width: 100%;
+    padding: 14px 20px;
+    border: 1px solid rgba(231, 227, 252, 0.23);
+    border-radius: 24px;
+    background: transparent;
+    color: #ffffff;
+}
+
+.login-form .eye-off-btn {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    right: 4%;
+    bottom: 52%;
+}
+
+
+.login-form .links {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.login-form .links p {
+    color: #c3c3c3;
+}
+
+.login-form .links a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.login-form .links a:hover {
+    text-decoration: underline;
+}
+
+.login-form .btn-login-footer {
+width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.login-form .btn-login-footer button {
+    width: 100%;
+    padding: 14px 20px;
+    font-weight: 600;
+    border-radius: 24px;
+    border: 1px solid rgba(231, 227, 252, 0.23);
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.login-form .btn-login-footer p {
+    text-align: center;
+    margin: 10px 0;
+    color: #c3c3c3;
+}
+
+.login-form .btn-login-footer .btn-submit {
+    background-color: rgba(61, 65, 66, 1);
+}
+
+.login-form .btn-login-footer .btn-google {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    background-color: transparent;
+}
+
+/* Responsive */
+
+@media (max-width: 500px) {
+    body {
+        padding: 2rem 0;
+    }
+
+    .login-card-container {
+        width: 400px;
+        padding: 2rem;
+    }
+}
