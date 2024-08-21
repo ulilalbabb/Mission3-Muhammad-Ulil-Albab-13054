@@ -77,6 +77,10 @@ body {
     color: #ffffff;
 }
 
+.login-form input::placeholder {
+    color: rgba(193, 194, 196, 1);
+}
+
 .login-form .eye-off-btn {
     width: 20px;
     height: 20px;
@@ -143,12 +147,12 @@ width: 100%;
 /* Responsive */
 
 @media (max-width: 500px) {
-    body {
-        padding: 2rem 0;
-    }
-
     .login-card-container {
         width: 400px;
         padding: 2rem;
+    }
+
+    .login-form .links {
+        font-size: 14px;
     }
 }
