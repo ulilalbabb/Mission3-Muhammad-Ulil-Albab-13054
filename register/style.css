@@ -9,7 +9,6 @@
 
 body {
     min-height: 100vh;
-    background: bisque;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -20,7 +19,7 @@ body {
     overflow: hidden;
 }
 
-.login-card-container {
+.register-card-container {
     width: 100%;
     max-width: 529px;
     color: #ffffff;
@@ -40,7 +39,6 @@ body {
 
 .login-header {
     text-align: center;
-    margin-bottom: 37px;
 }
 
 .login-header h3 {
@@ -90,23 +88,23 @@ body {
 }
 
 
-.login-form .links {
-    display: flex;
+.login-form .link {
+display: flex;
     align-items: center;
     justify-content: space-between;
     margin-bottom: 20px;
 }
 
-.login-form .links p {
+.login-form .link p {
     color: #c3c3c3;
 }
 
-.login-form .links a {
+.login-form .link a {
     text-decoration: none;
     color: #ffffff;
 }
 
-.login-form .links a:hover {
+.login-form .link a:hover {
     text-decoration: underline;
 }
 
@@ -146,12 +144,12 @@ width: 100%;
 
 /* Responsive */
 
-@media (max-width: 500px) {
+@media (max-width: 576px) {
     body {
         padding: 2rem 0;
     }
 
-    .login-card-container {
+    .register-card-container {
         width: 400px;
         padding: 2rem;
     }

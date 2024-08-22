@@ -9,7 +9,6 @@
 
 body {
     min-height: 100vh;
-    background: bisque;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -22,7 +21,8 @@ body {
 
 .login-card-container {
     width: 100%;
-    max-width: 592px;
+    max-width: 529px;
+    height: 663px;
     color: #ffffff;
     background: rgba(24, 26, 28, 0.84);
     display: flex;
@@ -146,7 +146,7 @@ width: 100%;
 
 /* Responsive */
 
-@media (max-width: 500px) {
+@media (max-width: 576px) {
     .login-card-container {
         width: 400px;
         padding: 2rem;
