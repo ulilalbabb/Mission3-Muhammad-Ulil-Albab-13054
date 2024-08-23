@@ -5,14 +5,14 @@
     padding: 0;
     box-sizing: border-box;
     font-family: "Lato", sans-serif;
+    color: #ffffff;
 }
 
 .header {
     height: 94px;
     background-color: rgba(32, 32, 38, 1);
-    padding: 25px 80px;
     display: flex;
-    align-items: center;
+    padding: 25px 80px;
     justify-content: space-between;    
 }
 
@@ -23,13 +23,88 @@
 }
 
 .header .navbar a {
-    color: #ffffff;
     padding: 40px;
     text-decoration: none;
     font-size: 18px;
     font-weight: 500;
 } 
 
-.header .navbar .top-right img {
-    align-content: center;
+.hero-section {
+    background-image: url(../assets/Rectangle\ 9.png);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    width: 100%;
+    height: 587px;
+}
+
+.hero-section .hero-detail {
+    padding: 80px;
+}
+
+.hero-section .hero-detail .hero-description {
+    margin-bottom: 50px;
+    max-width: 645px;
+}
+
+.hero-section .hero-detail .hero-description h1 {
+    font-weight: 700;
+    font-size: 48px;
+    margin-bottom: 15px;
+}
+
+
+.hero-section .hero-detail .hero-description p {
+    font-weight: 500;
+    font-size: 18px;
+}
+
+.hero-section .hero-detail .btn-preview {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.hero-section .hero-detail .btn-preview .btn-detail {
+    display: flex;
+    gap: 15px;
+}
+
+.hero-section .hero-detail .btn-preview .btn-detail button {
+    background-color: transparent;
+    border-radius: 48px;
+    border: none;
+    padding: 10px 26px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+
+.hero-section .hero-detail .btn-preview .btn-detail .btn-start {
+    background: #0F1E93;
+}
+
+.hero-section .hero-detail .btn-preview .btn-detail .btn-film-detail {
+    background-color: #22282A;
+}
+
+.hero-section .hero-detail .btn-preview .btn-detail button:last-of-type {
+    background-color: transparent;
+    color: #C1C2C4;
+    border: 1px solid #C1C2C4;
+    padding: 10px;
+    border-radius: 24px;
+}
+
+.hero-section .hero-detail .btn-preview .btn-audio-off {
+    display: flex;
+    align-items: center;
+    padding: 13px;
+    border: 1px solid #C1C2C4;
+    border-radius: 24px;
 }
