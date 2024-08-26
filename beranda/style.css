@@ -89,7 +89,7 @@
     background: #0F1E93;
 }
 
-.hero-section .hero-detail .btn-preview .btn-detail .btn-film-detail {
+.hero-section .hero-detail .btn-preview .btn-detail .btn-movie-detail {
     background-color: #22282A;
 }
 
@@ -107,4 +107,322 @@
     padding: 13px;
     border: 1px solid #C1C2C4;
     border-radius: 24px;
+}
+
+.card-movie-section,
+.top-movie-section,
+.trending-movie-section,
+.new-movie-section {
+    background-color: #181A1C;     ;
+    width: 100%;
+    padding: 40px 80px;
+}
+
+.card-movie-section .left-arrow {
+    border-radius: 50%;
+    border: 1px solid #E7E3FC3B;
+    background-color: #2F3334;
+    padding: 10px;
+    position: absolute;
+    left: 4.3%;
+    bottom: -15%;
+}
+
+.card-movie-section .right-arrow {
+    border-radius: 50%;
+    border: 1px solid #E7E3FC3B;
+    background-color: #2F3334;
+    padding: 10px;
+    position: absolute;
+    right: 4.3%;
+    bottom: -15%;
+}
+
+.card-movie-section h3 {
+    font-weight: 700;
+    font-size: 32px;
+    padding-bottom: 20px;
+}
+
+.card-movie-section .list-movie,
+.top-movie-section .top-list-movie,
+.trending-movie-section .trending-list-movie,
+.new-movie-section .new-list-movie {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.card-movie-section .list-movie .preview-1,
+.card-movie-section .list-movie .preview-2,
+.card-movie-section .list-movie .preview-3,
+.card-movie-section .list-movie .preview-4 {
+    width: 302px;
+    height: 162px;
+    border-radius: 10px;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.card-movie-section .list-movie .preview-1 {
+    background-image: url(../assets/dont-look-up.png);
+}
+
+.card-movie-section .list-movie .preview-2 {
+    background-image: url(../assets/all-of-us-are-dead.png);
+}
+
+.card-movie-section .list-movie .preview-3 {
+    background-image: url(../assets/blue-lock.png);
+}
+
+.card-movie-section .list-movie .preview-4 {
+    background-image: url(../assets/a-man-called-otto.png);
+}
+
+.card-movie-section .list-movie p {
+    padding: 20px;
+}
+
+.top-movie-section h3 {
+    font-weight: 700;
+    font-size: 32px;
+    padding-bottom: 20px;
+}
+
+.top-movie-section .top-list-movie .top-movie-1,
+.top-movie-section .top-list-movie .top-movie-2,
+.top-movie-section .top-list-movie .top-movie-3,
+.top-movie-section .top-list-movie .top-movie-4,    
+.top-movie-section .top-list-movie .top-movie-5 {
+    width: 234px;
+    height: 365px;
+    border-radius: 10px;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.top-movie-section .top-list-movie .top-movie-1 p,
+.top-movie-section .top-list-movie .top-movie-4 p,
+.new-movie-section .new-list-movie .new-movie-2 p, 
+.new-movie-section .new-list-movie .new-movie-4 p {
+    background: #0F1E93;
+    padding: 4px 10px;
+    border-radius: 24px;
+    position: relative;
+    top: -88%;
+    left: 6%;
+    font-weight: 700;
+    font-size: 15px;
+}
+
+.top-movie-section .top-list-movie .top-movie-1 {
+    background-image: url(../assets/image\ 219.png); 
+}
+
+.top-movie-section .top-list-movie .top-movie-2 {
+    background-image: url(../assets/image\ 230.png);
+}
+
+.top-movie-section .top-list-movie .top-movie-3 {
+    background-image: url(../assets/image\ 234.png);
+}
+
+.top-movie-section .top-list-movie .top-movie-4 {
+    background-image: url(../assets/image\ 214.png);
+}
+
+.top-movie-section .top-list-movie .top-movie-5 {
+    background-image: url(../assets/image\ 217.png);
+}
+
+.top-movie-section .top-left-arrow {
+    border-radius: 50%;
+    border: 1px solid #E7E3FC3B;
+    background-color: #2F3334;
+    padding: 10px;
+    position: absolute;
+    left: 4.3%;
+    bottom: -70%;
+}
+
+.top-movie-section .top-right-arrow {
+    border-radius: 50%;
+    border: 1px solid #E7E3FC3B;
+    background-color: #2F3334;
+    padding: 10px;
+    position: absolute;
+    right: 4.3%;
+    bottom: -70%;
+}
+
+.trending-movie-section h3 {
+    font-weight: 700;
+    font-size: 32px;
+    padding-bottom: 20px;
+}
+
+.trending-movie-section .trending-list-movie .trending-movie-1,
+.trending-movie-section .trending-list-movie .trending-movie-2,
+.trending-movie-section .trending-list-movie .trending-movie-3,
+.trending-movie-section .trending-list-movie .trending-movie-4,    
+.trending-movie-section .trending-list-movie .trending-movie-5 {
+    width: 234px;
+    height: 365px;
+    border-radius: 10px;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.trending-movie-section .trending-list-movie p,
+.new-movie-section .new-list-movie .new-movie-3 p {
+    background: #B71F1D;
+    display: flex;
+    flex-direction: column;
+    padding: 4px;
+    border-radius: 0 4px 0 4px;
+    position: relative;
+    top: -87%;
+    left: 80%;
+}
+
+.trending-movie-section .trending-list-movie .trending-movie-1 {
+    background-image: url(../assets/image\ 212.png); 
+}
+
+.trending-movie-section .trending-list-movie .trending-movie-2 {
+    background-image: url(../assets/image\ 221.png);
+}
+
+.trending-movie-section .trending-list-movie .trending-movie-3 {
+    background-image: url(../assets/image\ 235.png);
+}
+
+.trending-movie-section .trending-list-movie .trending-movie-4 {
+    background-image: url(../assets/image\ 215.png);
+}
+
+.trending-movie-section .trending-list-movie .trending-movie-5 {
+    background-image: url(../assets/image\ 211.png);
+}
+
+.trending-movie-section .trending-left-arrow {
+    border-radius: 50%;
+    border: 1px solid #E7E3FC3B;
+    background-color: #2F3334;
+    padding: 10px;
+    position: absolute;
+    left: 4.3%;
+    top: 233%;
+}
+
+.trending-movie-section .trending-right-arrow {
+    border-radius: 50%;
+    border: 1px solid #E7E3FC3B;
+    background-color: #2F3334;
+    padding: 10px;
+    position: absolute;
+    right: 4.3%;
+    top: 233%;
+}
+
+.new-movie-section h3 {
+    font-weight: 700;
+    font-size: 32px;
+    padding-bottom: 20px;
+}
+
+.new-movie-section .new-list-movie .new-movie-1,
+.new-movie-section .new-list-movie .new-movie-2,
+.new-movie-section .new-list-movie .new-movie-3,
+.new-movie-section .new-list-movie .new-movie-4,    
+.new-movie-section .new-list-movie .new-movie-5 {
+    width: 234px;
+    height: 365px;
+    border-radius: 10px;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.new-movie-section .new-list-movie .new-movie-1 {
+    background-image: url(../assets/image\ 211.png);
+}
+.new-movie-section .new-list-movie .new-movie-2 {
+    background-image: url(../assets/image\ 222.png);
+}
+.new-movie-section .new-list-movie .new-movie-3 {
+    background-image: url(../assets/image\ 217.png);
+}
+.new-movie-section .new-list-movie .new-movie-4 {
+    background-image: url(../assets/image\ 214.png);
+}
+.new-movie-section .new-list-movie .new-movie-5 {
+    background-image: url(../assets/image\ 218.png);
+}
+
+.new-movie-section .new-left-arrow {
+    border-radius: 50%;
+    border: 1px solid #E7E3FC3B;
+    background-color: #2F3334;
+    padding: 10px;
+    position: absolute;
+    left: 4.3%;
+    top: 300%;
+}
+
+.new-movie-section .new-right-arrow {
+    border-radius: 50%;
+    border: 1px solid #E7E3FC3B;
+    background-color: #2F3334;
+    padding: 10px;
+    position: absolute;
+    right: 4.3%;
+    top: 300%;
+}
+
+.new-movie-section .new-list-movie .new-movie-1 p {
+    background: #B71F1D;
+    display: flex;
+    flex-direction: column;
+    padding: 4px;
+    border-radius: 0 4px 0 4px;
+    position: relative;
+    top: -87%;
+    left: 80%;
+}
+
+.footer {
+    background-color: #181A1C;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 80px;
+    gap: 20px;
+}
+
+.footer .footer-logo img{
+    margin-bottom: 20px;
+}
+
+.footer .footer-content h4 {
+    padding-bottom: 15px;
+}
+
+.footer .footer-content p {
+    color: #C1C2C4;
+    padding-bottom: 15px;
 }
