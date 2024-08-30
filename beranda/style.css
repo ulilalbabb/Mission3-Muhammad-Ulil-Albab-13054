@@ -6,14 +6,20 @@
     box-sizing: border-box;
     font-family: "Lato", sans-serif;
     color: #ffffff;
+    scroll-behavior: smooth;
 }
 
+body {
+    background-color: #181A1C;
+}
+
+    /* Navbar */
 .header {
     height: 94px;
-    background-color: rgba(32, 32, 38, 1);
     display: flex;
-    padding: 25px 80px;
     justify-content: space-between;    
+    align-items: center;
+    padding: 0px 80px;
 }
 
 .header .navbar {
@@ -23,12 +29,54 @@
 }
 
 .header .navbar a {
-    padding: 40px;
     text-decoration: none;
     font-size: 18px;
     font-weight: 500;
+    padding: 0 60px;
 } 
 
+.header .navbar .logo {
+    height: 44px;
+}
+
+.header .navbar .mini-logo {
+    display: none;
+}
+
+.header .top-right .dropdown {
+    position: relative;
+    top: -13px;
+    right: -4px;
+    cursor: pointer;
+}
+
+.header .top-right {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+
+.header .top-right ul{
+    background-color: #181A1C;
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    padding: 15px 10px;
+    width: 180px;
+    border-radius: 5px;
+    display: none;
+    list-style-type: none;
+}
+
+.header .top-right ul li img {
+    padding: 0 10px;
+}
+
+.header .top-right .dropdown:hover ~ ul{
+    display: block;
+}
+
+    /* Hero Section */
 .hero-section {
     background-image: url(../assets/Rectangle\ 9.png);
     background-size: cover;
@@ -41,7 +89,8 @@
 }
 
 .hero-section .hero-detail {
-    padding: 80px;
+    padding-left: 60px;
+    padding-bottom: 70px;
 }
 
 .hero-section .hero-detail .hero-description {
@@ -54,7 +103,6 @@
     font-size: 48px;
     margin-bottom: 15px;
 }
-
 
 .hero-section .hero-detail .hero-description p {
     font-weight: 500;
@@ -84,13 +132,14 @@
     font-weight: 400;
 }
 
-
 .hero-section .hero-detail .btn-preview .btn-detail .btn-start {
     background: #0F1E93;
+    cursor: pointer;
 }
 
 .hero-section .hero-detail .btn-preview .btn-detail .btn-movie-detail {
     background-color: #22282A;
+    cursor: pointer;
 }
 
 .hero-section .hero-detail .btn-preview .btn-detail button:last-of-type {
@@ -102,309 +151,176 @@
 }
 
 .hero-section .hero-detail .btn-preview .btn-audio-off {
+    padding: 10px;
+    border: 1px solid #C1C2C4;
+    border-radius: 70%;
+    margin-right: 7.5%;
     display: flex;
     align-items: center;
-    padding: 13px;
-    border: 1px solid #C1C2C4;
+    justify-content: center;
+    cursor: pointer;
+}
+
+    /* Movie Section */
+.movie-section {
+    margin: 40px auto;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.movie-section h3 {
+    font-weight: 700;
+    font-size: 32px;
+    margin-bottom: 30px;
+    margin-left: 60px;
+}
+
+.movie-section .movies {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.movie-section .movies .movie-list-new-episode img,
+.movie-section .movies .movie-list-top img,
+.movie-section .movies .movie-list-new-release img {
+    width: 234px;
+    height: 365px;
+}
+
+.movie-section .movies .movie-list-new-episode p,
+.movie-section .movies .movie-list-new-release p{
+    background-color: rgba(15, 30, 147, 1);
+    padding: 4px 10px;
+    position: absolute;
+    margin-top: 15px;
+    margin-left: 10px;
     border-radius: 24px;
 }
 
-.card-movie-section,
-.top-movie-section,
-.trending-movie-section,
-.new-movie-section {
-    background-color: #181A1C;     ;
-    width: 100%;
-    padding: 40px 80px;
-}
-
-.card-movie-section .left-arrow {
-    border-radius: 50%;
-    border: 1px solid #E7E3FC3B;
-    background-color: #2F3334;
-    padding: 10px;
-    position: absolute;
-    left: 4.3%;
-    bottom: -15%;
-}
-
-.card-movie-section .right-arrow {
-    border-radius: 50%;
-    border: 1px solid #E7E3FC3B;
-    background-color: #2F3334;
-    padding: 10px;
-    position: absolute;
-    right: 4.3%;
-    bottom: -15%;
-}
-
-.card-movie-section h3 {
-    font-weight: 700;
-    font-size: 32px;
-    padding-bottom: 20px;
-}
-
-.card-movie-section .list-movie,
-.top-movie-section .top-list-movie,
-.trending-movie-section .trending-list-movie,
-.new-movie-section .new-list-movie {
-    width: 100%;
+.movie-section .movies .movie-list-top p {
     display: flex;
-    justify-content: space-between;
-    gap: 20px;
-    margin-bottom: 20px;
+    flex-direction: column;
+    position: absolute;
+    padding: 5px;
+    background-color: rgba(183, 31, 29, 1);
+    margin-left: 13%;
+    border-radius: 0 4px 0 4px;
 }
 
-.card-movie-section .list-movie .preview-1,
-.card-movie-section .list-movie .preview-2,
-.card-movie-section .list-movie .preview-3,
-.card-movie-section .list-movie .preview-4 {
+.movie-section .left-arrow {
+    border-radius: 50%;
+    border: 1px solid #E7E3FC3B;
+    background-color: #2F3334;
+    padding: 10px;
+    position: absolute;
+    left: 3%;
+    bottom: 25%;
+}
+
+.movie-section .right-arrow {
+    border-radius: 50%;
+    border: 1px solid #E7E3FC3B;
+    background-color: #2F3334;
+    padding: 10px;
+    position: absolute;
+    right: 3%;
+    bottom: 25%;
+}
+
+.movie-section .continue-movie-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.movie-section .continue-movie-list .card-continue-movie-1 {
+    background: url(../assets/dont-look-up.png);
     width: 302px;
     height: 162px;
-    border-radius: 10px;
-    background-position: center;
-    background-size: cover;
     display: flex;
     justify-content: space-between;
-    align-items: flex-end;
-}
-
-.card-movie-section .list-movie .preview-1 {
-    background-image: url(../assets/dont-look-up.png);
-}
-
-.card-movie-section .list-movie .preview-2 {
-    background-image: url(../assets/all-of-us-are-dead.png);
-}
-
-.card-movie-section .list-movie .preview-3 {
-    background-image: url(../assets/blue-lock.png);
-}
-
-.card-movie-section .list-movie .preview-4 {
-    background-image: url(../assets/a-man-called-otto.png);
-}
-
-.card-movie-section .list-movie p {
-    padding: 20px;
-}
-
-.top-movie-section h3 {
-    font-weight: 700;
-    font-size: 32px;
-    padding-bottom: 20px;
-}
-
-.top-movie-section .top-list-movie .top-movie-1,
-.top-movie-section .top-list-movie .top-movie-2,
-.top-movie-section .top-list-movie .top-movie-3,
-.top-movie-section .top-list-movie .top-movie-4,    
-.top-movie-section .top-list-movie .top-movie-5 {
-    width: 234px;
-    height: 365px;
-    border-radius: 10px;
-    background-position: center;
     background-size: cover;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-}
-
-.top-movie-section .top-list-movie .top-movie-1 p,
-.top-movie-section .top-list-movie .top-movie-4 p,
-.new-movie-section .new-list-movie .new-movie-2 p, 
-.new-movie-section .new-list-movie .new-movie-4 p {
-    background: #0F1E93;
-    padding: 4px 10px;
-    border-radius: 24px;
-    position: relative;
-    top: -88%;
-    left: 6%;
-    font-weight: 700;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+    align-items: end;
     font-size: 15px;
-}
-
-.top-movie-section .top-list-movie .top-movie-1 {
-    background-image: url(../assets/image\ 219.png); 
-}
-
-.top-movie-section .top-list-movie .top-movie-2 {
-    background-image: url(../assets/image\ 230.png);
-}
-
-.top-movie-section .top-list-movie .top-movie-3 {
-    background-image: url(../assets/image\ 234.png);
-}
-
-.top-movie-section .top-list-movie .top-movie-4 {
-    background-image: url(../assets/image\ 214.png);
-}
-
-.top-movie-section .top-list-movie .top-movie-5 {
-    background-image: url(../assets/image\ 217.png);
-}
-
-.top-movie-section .top-left-arrow {
-    border-radius: 50%;
-    border: 1px solid #E7E3FC3B;
-    background-color: #2F3334;
     padding: 10px;
-    position: absolute;
-    left: 4.3%;
-    bottom: -70%;
 }
 
-.top-movie-section .top-right-arrow {
-    border-radius: 50%;
-    border: 1px solid #E7E3FC3B;
-    background-color: #2F3334;
-    padding: 10px;
-    position: absolute;
-    right: 4.3%;
-    bottom: -70%;
-}
-
-.trending-movie-section h3 {
-    font-weight: 700;
-    font-size: 32px;
-    padding-bottom: 20px;
-}
-
-.trending-movie-section .trending-list-movie .trending-movie-1,
-.trending-movie-section .trending-list-movie .trending-movie-2,
-.trending-movie-section .trending-list-movie .trending-movie-3,
-.trending-movie-section .trending-list-movie .trending-movie-4,    
-.trending-movie-section .trending-list-movie .trending-movie-5 {
-    width: 234px;
-    height: 365px;
-    border-radius: 10px;
-    background-position: center;
-    background-size: cover;
+.movie-section .continue-movie-list .card-continue-movie-2 {
+    background: url(../assets/all-of-us-are-dead.png);
+    width: 302px;
+    height: 162px;
     display: flex;
     justify-content: space-between;
-    align-items: flex-end;
-}
-
-.trending-movie-section .trending-list-movie p,
-.new-movie-section .new-list-movie .new-movie-3 p {
-    background: #B71F1D;
-    display: flex;
-    flex-direction: column;
-    padding: 4px;
-    border-radius: 0 4px 0 4px;
-    position: relative;
-    top: -87%;
-    left: 80%;
-}
-
-.trending-movie-section .trending-list-movie .trending-movie-1 {
-    background-image: url(../assets/image\ 212.png); 
-}
-
-.trending-movie-section .trending-list-movie .trending-movie-2 {
-    background-image: url(../assets/image\ 221.png);
-}
-
-.trending-movie-section .trending-list-movie .trending-movie-3 {
-    background-image: url(../assets/image\ 235.png);
-}
-
-.trending-movie-section .trending-list-movie .trending-movie-4 {
-    background-image: url(../assets/image\ 215.png);
-}
-
-.trending-movie-section .trending-list-movie .trending-movie-5 {
-    background-image: url(../assets/image\ 211.png);
-}
-
-.trending-movie-section .trending-left-arrow {
-    border-radius: 50%;
-    border: 1px solid #E7E3FC3B;
-    background-color: #2F3334;
-    padding: 10px;
-    position: absolute;
-    left: 4.3%;
-    top: 233%;
-}
-
-.trending-movie-section .trending-right-arrow {
-    border-radius: 50%;
-    border: 1px solid #E7E3FC3B;
-    background-color: #2F3334;
-    padding: 10px;
-    position: absolute;
-    right: 4.3%;
-    top: 233%;
-}
-
-.new-movie-section h3 {
-    font-weight: 700;
-    font-size: 32px;
-    padding-bottom: 20px;
-}
-
-.new-movie-section .new-list-movie .new-movie-1,
-.new-movie-section .new-list-movie .new-movie-2,
-.new-movie-section .new-list-movie .new-movie-3,
-.new-movie-section .new-list-movie .new-movie-4,    
-.new-movie-section .new-list-movie .new-movie-5 {
-    width: 234px;
-    height: 365px;
-    border-radius: 10px;
-    background-position: center;
     background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+    align-items: end;
+    font-size: 15px;
+    padding: 10px;
+}
+
+.movie-section .continue-movie-list .card-continue-movie-3 {
+    background: url(../assets/blue-lock.png);
+    width: 302px;
+    height: 162px;
     display: flex;
     justify-content: space-between;
-    align-items: flex-end;
-}
-
-.new-movie-section .new-list-movie .new-movie-1 {
-    background-image: url(../assets/image\ 211.png);
-}
-.new-movie-section .new-list-movie .new-movie-2 {
-    background-image: url(../assets/image\ 222.png);
-}
-.new-movie-section .new-list-movie .new-movie-3 {
-    background-image: url(../assets/image\ 217.png);
-}
-.new-movie-section .new-list-movie .new-movie-4 {
-    background-image: url(../assets/image\ 214.png);
-}
-.new-movie-section .new-list-movie .new-movie-5 {
-    background-image: url(../assets/image\ 218.png);
-}
-
-.new-movie-section .new-left-arrow {
-    border-radius: 50%;
-    border: 1px solid #E7E3FC3B;
-    background-color: #2F3334;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+    align-items: end;
+    font-size: 15px;
     padding: 10px;
-    position: absolute;
-    left: 4.3%;
-    top: 300%;
 }
 
-.new-movie-section .new-right-arrow {
-    border-radius: 50%;
-    border: 1px solid #E7E3FC3B;
-    background-color: #2F3334;
-    padding: 10px;
-    position: absolute;
-    right: 4.3%;
-    top: 300%;
-}
-
-.new-movie-section .new-list-movie .new-movie-1 p {
-    background: #B71F1D;
+.movie-section .continue-movie-list .card-continue-movie-4 {
+    background: url(../assets/a-man-called-otto.png);
+    width: 302px;
+    height: 162px;
     display: flex;
-    flex-direction: column;
-    padding: 4px;
-    border-radius: 0 4px 0 4px;
-    position: relative;
-    top: -87%;
-    left: 80%;
+    justify-content: space-between;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+    align-items: end;
+    font-size: 15px;
+    padding: 10px;
 }
 
+.movie-section .trending-left-arrow, 
+.movie-section .top-left-arrow,
+.movie-section .new-episode-left-arrow {
+    border-radius: 50%;
+    border: 1px solid #E7E3FC3B;
+    background-color: #2F3334;
+    padding: 10px;
+    position: absolute;
+    left: 3.5%;
+    bottom: 40%;
+}
+
+.movie-section .top-right-arrow,
+.movie-section .trending-right-arrow,
+.movie-section .new-episode-right-arrow {
+    border-radius: 50%;
+    border: 1px solid #E7E3FC3B;
+    background-color: #2F3334;
+    padding: 10px;
+    position: absolute;
+    right: 3.5%;
+    bottom: 40%;
+}
+
+/* Footer */
 .footer {
     background-color: #181A1C;
     display: flex;
@@ -418,11 +334,157 @@
     margin-bottom: 20px;
 }
 
-.footer .footer-content h4 {
-    padding-bottom: 15px;
+.footer .footer-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
-.footer .footer-content p {
+.footer .footer-content .genre-arrow,
+.footer .footer-bantuan .bantuan-arrow {
+    display: none;
+}
+
+.footer .footer-content .col {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.footer .footer-content .col ul,
+.footer .footer-bantuan ul {
+    list-style-type: none;
+}
+
+.footer .footer-content .col ul li,
+.footer .footer-bantuan ul li {
+    padding: 7px 0;
+}
+
+.footer .footer-content .col ul li a,
+.footer .footer-bantuan ul li a {
     color: #C1C2C4;
-    padding-bottom: 15px;
+    text-decoration: none;
+}
+
+.footer .footer-content .col ul li a:hover,
+.footer .footer-bantuan ul li a:hover {
+    text-decoration: underline;
+}
+
+
+    /* Responsive Mobile Phone */
+@media (max-width: 560px) {    
+   .header {
+    padding: 0 20px;
+   }
+   .header .navbar .logo{
+    display: none;
+   }
+   .header .navbar .mini-logo{
+    display: block;
+   }
+   .header .navbar a {
+    padding: 0 20px;
+    font-size: 15px;
+   }
+   .hero-section {
+    height: 225px;
+   }
+   .hero-section .hero-detail {
+    padding: 25px;
+   }
+   .hero-section .hero-detail .hero-description {
+    margin-bottom: 12px;
+   }
+   .hero-section .hero-detail .hero-description h1 {
+    font-size: 24px;
+    margin-bottom: 12px;
+   }
+   .hero-section .hero-detail .hero-description p {
+    font-size: 12px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
+   }
+   .hero-section .hero-detail .btn-preview .btn-detail button {
+    padding: 4px 12px;
+    font-size: 12px;
+    }
+    .hero-section .hero-detail .btn-preview .btn-audio-off {
+        padding: 6px;
+        margin-right: 3%;
+    }
+
+    .movie-section {
+        display: flex;
+        align-items: start;
+        padding-left: 20px;
+        overflow-x: hidden;
+    }
+    .movie-section h3 {
+        font-size: 25px;
+        font-weight: 500;
+        margin-left: -2px;
+    }   
+    .movie-section .movies {
+        gap: 15px;
+    }    
+    .movie-section .movies .movie-list-top img,
+    .movie-section .movies .movie-list-new-episode img,
+    .movie-section .movies .movie-list-new-release img {
+        width: 95px;
+        height: 145px;
+    }
+    .movie-section .movies .movie-list-new-episode p,
+    .movie-section .movies .movie-list-new-release p {
+        font-size: 5px;
+        margin-top: 10px;
+        margin-left: 5px;
+    }
+    .movie-section .movies .movie-list-top p {
+        font-size: 6px;
+    }
+    .movie-section .left-arrow,
+    .movie-section .top-left-arrow,
+    .movie-section .trending-left-arrow,
+    .movie-section .new-episode-left-arrow,
+    .movie-section .right-arrow,
+    .movie-section .top-right-arrow,
+    .movie-section .trending-right-arrow,
+    .movie-section .new-episode-right-arrow {
+        display: none;
+    }
+
+    .footer {
+        align-items: start;
+        flex-direction: column;
+        padding: 20px;
+    }
+    .footer .footer-logo img {
+        margin-bottom: 20px;
+        height: 25px;
+    }
+    .footer .footer-content .genre-arrow {
+        display: block;
+        width: 7px;
+        height: 12px;
+        position: absolute;
+        right: 5%;
+    }
+    .footer .footer-bantuan .bantuan-arrow {
+        display: block;
+        width: 7px;
+        height: 12px;
+        position: absolute;
+        right: 5%;
+        bottom: -100%;
+    }    
+    .footer .footer-content .col, 
+    .footer .footer-bantuan ul {
+        display: none;
+    } 
 }
