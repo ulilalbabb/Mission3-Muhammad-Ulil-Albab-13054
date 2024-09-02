@@ -385,7 +385,7 @@ body {
     display: block;
    }
    .header .navbar a {
-    padding: 0 20px;
+    padding: 0 10px;
     font-size: 15px;
    }
    .hero-section {
@@ -481,7 +481,7 @@ body {
         height: 12px;
         position: absolute;
         right: 5%;
-        bottom: -100%;
+        bottom: -130%;
     }    
     .footer .footer-content .col, 
     .footer .footer-bantuan ul {
