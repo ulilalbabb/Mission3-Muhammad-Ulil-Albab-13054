@@ -16,7 +16,6 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    overflow: hidden;
 }
 
 .register-card-container {
@@ -150,7 +149,6 @@ width: 100%;
     }
 
     .register-card-container {
-        width: 400px;
-        padding: 2rem;
+        margin: 0 1.5rem;
     }
 }
